@@ -1,0 +1,37 @@
+    1  uname -a
+    2  exit
+    3  ls /vagrant
+    4  sudo at-get update
+    5  sudo apt-get update
+    6  sudo apt-get install -y ca-certificates
+    7   sudo curl -o /etc/apt/trusted.gpg.d/angie-signing.gpg             https://angie.software/keys/angie-signing.gpg
+    8  echo "deb https://download.angie.software/angie/$(. /etc/os-release && echo "$ID/$VERSION_ID $VERSION_CODENAME") main"     | sudo tee /etc/apt/sources.list.d/angie.list > /dev/null
+    9  sudo apt-get update
+   10  lsb_realise -a
+   11  lsb_release -a
+   12  cat /etc/apt/sources.list.d/angie.list
+   13  apt update
+   14  sudo apt update
+   15  sudo apt install angie angie-module-brotli
+   16  sudo nano /etc/angie/angie.conf
+   17  ps -afx
+   18  ss -ntlp
+   19  sudo systemctl status angie.service 
+   20  ls -la /etc/angie
+   21  cd /etc/angie
+   22  ls -la
+   23  cd http.d/
+   24  ls
+   25  cat default.conf
+   26  sudo nano default.conf 
+   27  sudo angie -t
+   28  sudo cat /etc/angie/angie.conf
+   29  ls /usr/lib/angie/modules
+   30  sudo nano /etc/angie/angie.conf
+   31  sudo cat /etc/angie/angie.conf
+   32  sudo angie -t
+   33  sudo service angie restart
+   34  sudo systemctl status angie.service 
+   35  ps -afx
+   36  history
+   37  history >> /vagrant/history.txt
