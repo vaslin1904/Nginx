@@ -1,0 +1,77 @@
+    1  uname -a
+    2  exit
+    3  ls /vagrant
+    4  sudo at-get update
+    5  sudo apt-get update
+    6  sudo apt-get install -y ca-certificates
+    7   sudo curl -o /etc/apt/trusted.gpg.d/angie-signing.gpg             https://angie.software/keys/angie-signing.gpg
+    8  echo "deb https://download.angie.software/angie/$(. /etc/os-release && echo "$ID/$VERSION_ID $VERSION_CODENAME") main"     | sudo tee /etc/apt/sources.list.d/angie.list > /dev/null
+    9  sudo apt-get update
+   10  lsb_realise -a
+   11  lsb_release -a
+   12  cat /etc/apt/sources.list.d/angie.list
+   13  apt update
+   14  sudo apt update
+   15  sudo apt install angie angie-module-brotli
+   16  sudo nano /etc/angie/angie.conf
+   17  ps -afx
+   18  ss -ntlp
+   19  sudo systemctl status angie.service 
+   20  ls -la /etc/angie
+   21  cd /etc/angie
+   22  ls -la
+   23  cd http.d/
+   24  ls
+   25  cat default.conf
+   26  sudo nano default.conf 
+   27  sudo angie -t
+   28  sudo cat /etc/angie/angie.conf
+   29  ls /usr/lib/angie/modules
+   30  sudo nano /etc/angie/angie.conf
+   31  sudo cat /etc/angie/angie.conf
+   32  sudo angie -t
+   33  sudo service angie restart
+   34  sudo systemctl status angie.service 
+   35  ps -afx
+   36  history
+   37  history >> /vagrant/history.txt
+   38  cat /vagrant/history.txt
+   39  exit
+   40  sudo apt install docker.io 
+   41  docker ps -a
+   42  sudo docker ps -a
+   43  docker run --rm --name angie -v /var/www:/usr/share/angie/html:ro     -v $(pwd)/angie.conf:/etc/angie/angie.conf:ro -p 8080:80 -d docker.angie.software/angie:1.11.4-ubuntu
+   44  sudo docker run --rm --name angie -v /var/www:/usr/share/angie/html:ro     -v $(pwd)/angie.conf:/etc/angie/angie.conf:ro -p 8080:80 -d docker.angie.software/angie:1.11.4-ubuntu
+   45  docker images
+   46  sudo docker images
+   47  ps -afx
+   48  sudo ps -afx
+   49  ss -ntpl
+   50  sudo ss -ntpl
+   51  docker run
+   52  docker ps -a
+   53  sudo docker ps -a
+   54  sudo docker run --rm --name angie -v /var/www:/usr/share/angie/html:ro -p 8080:80 -d docker.angie.software/angie:1.11.4-ubuntu
+   55  sudo ps -afx
+   56  ss -ntlp
+   57  iptables -nvL
+   58  sudo iptables -nvL
+   59  ip a
+   60  curl http://localhost:8800
+   61  sudo curl http://localhost:8800
+   62  sudo curl http://localhost:82
+   63  sudo curl http://localhost:8080
+   64  ls -la /var/www/html
+   65  sudo ls -la /var/www/html
+   66  sudo ls -la /var/www/index.html
+   67  sudo ls -la /var/www/
+   68  clear
+   69  docker ps -a
+   70  sudo s
+   71  sudo su
+   72  exit
+   73  history
+   74  ls
+   75  ls angie/
+   76  ls /vagrant
+   77  history >> /vagrant/his_docker.txt
