@@ -30,7 +30,11 @@ ________________________________________________________________________________
 + ![systemctl status](picture/status_service_ang.png) </br>
 _______________________________________________________________________________________________________________________________
 ## Часть2. Запуск Angie через Docker
+1. Установка  docker
+   *apt install docker.io*
 
+2.Загрузка образа docker и создание контейнера
+docker run --rm --name angie -v /var/www:/usr/share/angie/html:ro -p 8080:80 -d docker.angie.software/angie:1.11.4-ubuntu
 
 
 
