@@ -39,8 +39,12 @@ ________________________________________________________________________________
 3. Просмотр занятых портов  angie (port 82) и docker (8080)
    *ss -ntpl*
 ![ports](picture/2ntlpdoc_ang.png) </br>
-
-
-
+4. Проверить работу Angie на порту 82 и 80880
+*curl http://localhost:82*
+*curl http://localhost:8080*
+![curl](picture/3doc_curl.png) </br>
+5. Скопировать конфигурационные файлы из докер на хостовую машину. Присоединить полученную папку к контейнеру
+   *sudo docker cp angie:/etc/angie /home/vagrant/angie*
+   
 
 
