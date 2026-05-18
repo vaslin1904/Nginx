@@ -33,10 +33,12 @@ ________________________________________________________________________________
 1. Установка  docker
    *apt install docker.io*
 
-2.Загрузка образа docker и создание контейнера
-docker run --rm --name angie -v /var/www:/usr/share/angie/html:ro -p 8080:80 -d docker.angie.software/angie:1.11.4-ubuntu
-
-
+2. Загрузка образа docker и создание контейнера
+*docker run --rm --name angie -v /var/www:/usr/share/angie/html:ro -p **8080:80** -d docker.angie.software/angie:1.11.4-ubuntu*
+![angie in docker](picture/1psdocker_ang.png) </br>
+3. Просмотр занятых портов  angie (port 82) и docker (8080)
+   *ss -ntpl*
+![ports](picture/2ntlpdoc_ang.png) </br>
 
 
 
