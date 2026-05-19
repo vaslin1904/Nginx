@@ -53,9 +53,9 @@ ________________________________________________________________________________
 7. Команда перезапуска сервиса без перезагрузки контейнера </br>
    *docker kill -s HUP ang_vol*
    ![reload service](picture/reload_ang_conf_docker.png) </br>
-9.  Просмотр логов Angie контейнера
-    *docker logs ang_vol*
+9.  Просмотр логов Angie контейнера </br>
+    *docker logs ang_vol* </br>
 10. Удалить контейнер
-    *docker ps*
-    *docker rm ang_doc*
+    *docker ps* </br>
+    *docker rm ang_doc* </br>
 
