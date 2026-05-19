@@ -43,8 +43,11 @@ ________________________________________________________________________________
 *curl http://localhost:82*
 *curl http://localhost:8080*
 ![curl](picture/3doc_curl.png) </br>
-5. Скопировать конфигурационные файлы из докер на хостовую машину. Присоединить полученную папку к контейнеру
-   *sudo docker cp angie:/etc/angie /home/vagrant/angie*
+5. Скопировать конфигурационные файлы из докер на хостовую машину. Присоединить полученную папку к контейнеру</br>
+   *sudo docker cp angie:/etc/angie/ /home/vagrant/angie*
+   *sudo docker run --name ang_vol -v /var/www:/usr/share/angie/html:ro -v /home/vagrant/angie:/etc/angie:ro --network host -d docker.angie.software/angie:1.11.4-ubuntu*
+6. Узнать какая команда использовалась для создания контейнера
+   
    
 
 
