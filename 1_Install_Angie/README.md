@@ -50,6 +50,8 @@ ________________________________________________________________________________
    *docker ps*
    *docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro assaflavie/runlike 2fe275830daa*
    ![assaflavie](picture/assaflavie.png) </br>
-   
+7. Команда перезапуска сервиса без перезагрузки контейнера
+   *docker kill -s HUP ang_vol*
+8.  
 
 
