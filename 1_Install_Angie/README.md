@@ -47,7 +47,9 @@ ________________________________________________________________________________
    *sudo docker cp angie:/etc/angie/ /home/vagrant/angie*
    *sudo docker run --name ang_vol -v /var/www:/usr/share/angie/html:ro -v /home/vagrant/angie:/etc/angie:ro --network host -d docker.angie.software/angie:1.11.4-ubuntu*
 6. Узнать какая команда использовалась для создания контейнера
-   
+   *docker ps*
+   *docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro assaflavie/runlike 2fe275830daa*
+   ![assaflavie](picture/assaflavie.png) </br>
    
 
 
