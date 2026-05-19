@@ -50,8 +50,12 @@ ________________________________________________________________________________
    *docker ps*
    *docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro assaflavie/runlike 2fe275830daa*
    ![assaflavie](picture/assaflavie.png) </br>
-7. Команда перезапуска сервиса без перезагрузки контейнера
+7. Команда перезапуска сервиса без перезагрузки контейнера </br>
    *docker kill -s HUP ang_vol*
-8.  
-
+   ![reload service](picture/reload_ang_conf_docker.png) </br>
+9.  Просмотр логов Angie контейнера
+    *docker logs ang_vol*
+10. Удалить контейнер
+    *docker ps*
+    *docker rm ang_doc*
 
