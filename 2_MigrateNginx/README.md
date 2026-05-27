@@ -64,5 +64,29 @@ ________________________________________________________________________________
 ## Миграция с Docker
 * Посмотреть контейнеры
   **docker ps**
+pic!
 * Посмотреть команду запуска контейнера. Важно помнить и сохранить команду запуска </br>
+**docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro assaflavie/runlike angie2**</br>
+pic!
+Или смотреть конфигурацию контейнера с помощью команды:</br>
+**sudo docker inspect angie2**</br>
+  В команде видно, что конфиги подключаются к контейнеру. Так как изменения уже были сделаны</br>
+  в предыдущей части работы, то скопируем их в папку конфигов контейнера angie2</br>
+  **sudo cp /etc/angie/angie.conf ~/angie/**</br>
+  Так же изменить страничку nginx index.html из каталога http и</br>
+  скопируем в путь /var/www/html</br>
+  Изменим права для этой директории:
+  **sudo chmod 755 -R /var/www/html**
+![index](picture/7change%20docker.png)
+В конфиге **~/angie/sites-available/default**
+Изменим директорию сайта
+*Запускаем контейнер
+*Для просмотра этапа загрузки контейнера используется команда:
+**sudo docker logs f1e4eb815d37**
+  где набор цифр и букв - ID контейнера.
+*Перечитаем конфиги angie для docker
+**sudo docker kill -s HUP angie2**
+*Проверяем работу angie в docker
+**sudo curl http://localhost:80**
+  
 
