@@ -15,7 +15,7 @@ ________________________________________________________________________________
   - Перенос настроек gzip</br>
   - Перенос настроек brotly, ранее был установлен и вкючен в конфиге angie</br>
   - Переносится include в http модуле. Подключение директории /etc/angie/sites-enabled/*</br>
-  - Перенос настроек map
+  - Перенос настроек map</br>
 * Поиск в скопированных конфигах "nginx" и замена на angie</br>
   **grep -nr "nginx"**</br>
    - Для одного файла: **sed -i 's|nginx|angie|g' snippets/fastcgi-php.conf** </br>
@@ -30,7 +30,7 @@ ________________________________________________________________________________
     ln -sfn "$new" "$f" </br>
   done </br>
 ' _ {} + /* </br>
-![change](picture/3%20change%20link.png)
+![change](picture/3%20change%20link.png)</br>
 * Проверка конфигурации</br>
   **angie -t**</br>
 Столкнулась с ошибкой: */ angie: [emerg] unknown "vary_header" variable</br>
@@ -41,9 +41,9 @@ ________________________________________________________________________________
   **sudo find /etc/angie -type f -name "*.conf" -exec grep -l "vary_header" {} + **</br>
   В результате выполнения найден скопированный файл nginx static-avif.conf.</br>
  static-avif.conf - для настройки обработки запросов к изображениям в форматах AVIF и WebP.</br>
-  Ошибка связа с тем, что не был перенесен с конфига nginx в angie.conf блок настроек **map**</br>
+  Ошибка связа с тем, что не был перенесен с конфига nginx в angie.conf блок определения переменных **map**</br>
   при этом был перенесен файл static-avif.conf.</br>
-  ![map](picture/5.%20map%20from%20nginx.png)
+  ![map](picture/5.%20map%20from%20nginx.png)</br>
   
 * Сравнить файлы mem.types, добавить изменения в файл angie</br>
 * Проверить права для файлов</br>
@@ -51,7 +51,7 @@ ________________________________________________________________________________
   **angie -t**</br>
 * Перечитать конфиги angie</br>
 **sudo kill -HUP $(cat /run/angie.pid)**</br>
-![map](picture/6%20reload%20configs%20angie%20HUP.png)
+![map](picture/6%20reload%20configs%20angie%20HUP.png)</br>
 ### Если есть в системе nginx!!!</br>
 - Обязательно остановить nginx перед запуском angie</br>
   **sudo systemctl nginx stop && sudo systemctl angie start**</br>
@@ -59,15 +59,15 @@ ________________________________________________________________________________
 **sudo systemctl disable nginx**</br>
 - Включить автозапуск у Angie</br>
 **sudo angie enable**</br>
-![status](picture/status.png)
+![status](picture/status.png)</br>
 __________________________________________________________________________________________________________________
-## Миграция с Docker
-* Посмотреть контейнеры
-  **docker ps**
-pic!
+## Миграция с Docker</br>
+* Посмотреть контейнеры</br>
+  **docker ps**</br>
+![spisok](picture/8spisokcont.png)</br>
 * Посмотреть команду запуска контейнера. Важно помнить и сохранить команду запуска </br>
 **docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro assaflavie/runlike angie2**</br>
-pic!
+![comand](picture/9comand.png)</br>
 Или смотреть конфигурацию контейнера с помощью команды:</br>
 **sudo docker inspect angie2**</br>
   В команде видно, что конфиги подключаются к контейнеру. Так как изменения уже были сделаны</br>
@@ -75,18 +75,19 @@ pic!
   **sudo cp /etc/angie/angie.conf ~/angie/**</br>
   Так же изменить страничку nginx index.html из каталога http и</br>
   скопируем в путь /var/www/html</br>
-  Изменим права для этой директории:
-  **sudo chmod 755 -R /var/www/html**
-![index](picture/7change%20docker.png)
-В конфиге **~/angie/sites-available/default**
-Изменим директорию сайта
-*Запускаем контейнер
-*Для просмотра этапа загрузки контейнера используется команда:
-**sudo docker logs f1e4eb815d37**
-  где набор цифр и букв - ID контейнера.
-*Перечитаем конфиги angie для docker
-**sudo docker kill -s HUP angie2**
-*Проверяем работу angie в docker
-**sudo curl http://localhost:80**
-  
+  Изменим права для этой директории:</br>
+  **sudo chmod 755 -R /var/www/html**</br>
+![index](picture/7change%20docker.png)</br>
+В конфиге **~/angie/sites-available/default**</br>
+Изменим директорию сайта</br>
+![docker](picture/10dockerConf.png)</br>
+*Запускаем контейнер</br>
+*Для просмотра этапа загрузки контейнера используется команда:</br>
+**sudo docker logs f1e4eb815d37**</br>
+  где набор цифр и букв - ID контейнера.</br>
+*Перечитаем конфиги angie для docker</br>
+**sudo docker kill -s HUP angie2**</br>
+*Проверяем работу angie в docker</br>
+**sudo curl http://localhost:80**</br>
+ ![curl](picture/11CurlDocker.png) </br>
 
