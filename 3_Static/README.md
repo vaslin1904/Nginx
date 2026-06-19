@@ -30,24 +30,37 @@ ___________________________________________________________
     *location ^~ /assets/css/ { </br> 
        add_header X-Info $map_var; </br> 
    }* </br>
-- Для работы с переменной map необходимо присвоить ей значение в директиве map основного конфига **angie/angie.conf
+   _________________________________________________________
+   *location Точное совпадение
+     *location = /error/index.html { </br> 
+        internal;</br> 
+    }*</br> 
+- Для работы с переменной map необходимо присвоить ей значение в директиве map основного конфига **angie/angie.conf**
   *map $uri $map_var { </br>
     default "standart"; </br>
-    ~*jpg$ "picture"; </br>
-    ~*css$ "style"; </br>
-    }*
-  Данная переменная **map_var** по-умолчанию имеет значение standart,
-  если происходит обращение к файлу с расширением jpg, то она принимает значение **picture**
-  если происходит обращение к файлу с расшерением css, то она принимает значение **style**
-    Сама переменная используется в файле **angie/http.d/default.conf** в location.
-  Если запрос к происходит запрос к файлу css или jpg, то к запросу добавляется заголовок со значением переменной  **map_var**
-  location c регулярным выражением поиска картинок</br>
-    *location ~* \.(?:jpeg|jpg|png|svg)$ { </br>
-        expires 30d;	
+    \~*jpg$ "picture"; </br>
+    \~*css$ "style"; </br>
+    }* </br>
+  Данная переменная **map_var** по-умолчанию имеет значение **standart**,</br>
+  если происходит обращение к файлу с расширением jpg, то она принимает значение **picture**</br>
+  если происходит обращение к файлу с расшерением css, то она принимает значение **style**</br>
+    Сама переменная используется в файле **angie/http.d/default.conf** в location.</br>
+  Если запрос к происходит запрос к файлу css или jpg, то к запросу добавляется заголовок со значением переменной  **map_var**</br>
+     *location ~* \.(?:jpeg|jpg|png|svg)$ { </br>
+        expires 30d;	</br>
         add_header X-Info **$map_var**; </br>       
    }* </br>
-  и
-  *location ^~ /assets/css/ { </br> 
+  и </br>
+    *location ^~ /assets/css/ { </br> 
        add_header X-Info **$map_var**; </br> 
-   }* </br>
-   
+     }* </br>
+![map_css](https://github.com/vaslin1904/Nginx/blob/main/3_Static/img/map_css.png) </br> 
+![map_jpg](https://github.com/vaslin1904/Nginx/blob/main/3_Static/img/map_jpg.png) </br> 
+- Настроен вида перенаправлений 301/302
+  *return 301 http://mysite.ru$request_uri;*
+![return301/302](https://github.com/vaslin1904/Nginx/blob/main/3_Static/img/return302.png)
+![img_return301/302](https://github.com/vaslin1904/Nginx/blob/main/3_Static/img/return302_2.png)
+_______________________________________________________________________________________________________________________
+Сайт отображается со всеми css, ссылками
+![site](https://github.com/vaslin1904/Nginx/blob/main/3_Static/img/site.png)
+  
