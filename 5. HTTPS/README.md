@@ -42,11 +42,12 @@ ________________________________________________________________________________
       ssl_certificate		$acme_cert_ecdsa;
       ssl_certificate_key	$acme_cert_key_ecdsa;
 ```
-4. Проверяем полученный сертификат
-   **sudo docker exec -it webserver openssl s_client -connect mystend.strangled.net:443**
+4. Проверяем полученный сертификат </br>
+   **sudo docker exec -it webserver openssl s_client -connect mystend.strangled.net:443**</br>
 <img width="971" height="511" alt="image" src="https://github.com/user-attachments/assets/7829a468-54de-4abb-b088-b2faf9465089" />
+</br>
 _________________________________________________________________________________________________________________________________
-## Настройка основных параметров HTTPS
+## Настройка основных параметров HTTPS </br>
 Включение HTTPS по порту 443
 ``` listen 443 ssl reuseport;
     listen 443 quic reuseport;
@@ -104,5 +105,5 @@ ________________________________________________________________________________
       http3_max_concurrent_streams 128;
 ```
 ______________________________________________________________________________________________________________________________
-## Тест корректности конфигурации с помощью внешнего сервиса 
+## Тест корректности конфигурации с помощью внешнего сервиса https://www.ssllabs.com/ssltest/analyze.html?d=mystend.strangled.net
 <img width="1345" height="978" alt="image" src="https://github.com/user-attachments/assets/4beff492-4140-4985-929e-e7e11a3619fa" />
