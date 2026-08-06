@@ -72,12 +72,21 @@ ________________________________________________________________________________
 <img width="630" height="227" alt="image" src="https://github.com/user-attachments/assets/093cd5ba-9535-44c2-bb2f-4fe2fa45cca9" />
 Работа по https </br>
 <img width="1635" height="944" alt="image" src="https://github.com/user-attachments/assets/039e5a96-80f8-4aef-b412-e8a68ba5aeae" />
-
+Передача https на bakend
+```#Передача https на backend
+        fastcgi_param HTTPS on;
+        fastcgi_param HTTP_X_FORWARDED_PROTO https;
+        fastcgi_param HTTP_X_FORWARDED_PORT 443;
+        fastcgi_param HTTP_HOST $host;
+```
 ______________________________________________________________________________________________________________________________
 ## Настройка заголовок HSTS
 ``` #HSTS Использование HTTPS на год
       add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
 ```
+Проверка заголовка: 
+**curl -I https://mystend.strangled.net**
+<img width="987" height="393" alt="image" src="https://github.com/user-attachments/assets/72052cda-3022-4416-ac0a-5514240b9609" />
 
 ____________________________________________________________________________________________________________________________
 ## Включение протоколов HTTP/2 и HTTP/3.
