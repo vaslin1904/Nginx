@@ -1,0 +1,346 @@
+    1  sudo ls -la angie/http.d/
+    2  sudo rm angie/http.d/.default.conf.swp 
+    3  sudo ls -la angie/http.d/
+    4  sudo nano angie/http.d/default.conf 
+    5  учше
+    6  exit
+    7  sudo nano angie/http.d/default.conf 
+    8  sudo docker start angie
+    9  docker kill -s HUP angie
+   10  sudo docker kill -s HUP angie
+   11  sudo nano angie/http.d/default.conf 
+   12  sudo docker kill -s HUP angie
+   13  sudo cat angie/http.d/default.conf 
+   14  sudo nano angie/angie.conf
+   15  sudo nano angie/http.d/default.conf 
+   16  sudo docker kill -s HUP angie
+   17  sudo docker run angie
+   18  sudo docker start angie
+   19  sudo docker kill -s HUP angie
+   20  sudo docker ps
+   21  sudo docker start angie
+   22  sudo docker ps
+   23  sudo docker ps -a
+   24  sudo docker exec angie -t angie
+   25  sudo nano angie/http.d/default.conf 
+   26  sudo docker start angie
+   27  sudo docker kill -s HUP angie
+   28  ls 
+   29  ls git
+   30  cp angie/http.d/default.conf git/tmpfiles/
+   31  cd git/tmpfiles/
+   32  git add .
+   33  git commit -m "add new default.conf"
+   34  ls .ssh/
+   35  ls ~/.ssh/
+   36  git status
+   37  git pull
+   38  git push
+   39  git config global 
+   40  git config
+   41  git config --global
+   42  git commit -m "add new default.conf"
+   43  git config --global user.email "vaslin1904@yandex.ru"
+   44  git config --global user.name "vaslin1904"
+   45  git commit -m "add new default.conf"
+   46  git push
+   47  exit
+   48  sudo nano angie/http.d/default.conf 
+   49  sudo docker start angie
+   50  sudo docker angie angie -t
+   51  sudo docker exec angie angie -t
+   52  sudo kill -s HUP angie
+   53  sudo docker kill -s HUP angie
+   54  sudo nano angie/http.d/default.conf 
+   55  sudo docker kill -s HUP angie
+   56  curl --head mysite.ru
+   57  sudo nano angie/http.d/default.conf 
+   58  sudo docker kill -s HUP angie
+   59  curl -I http://mysite.ru/images/pic01.jpg
+   60  sudo nano angie/http.d/default.conf 
+   61  sudo docker kill -s HUP angie
+   62  curl -I http://mysite.ru/images/pic01.jpg
+   63  sudo nano angie/http.d/default.conf 
+   64  sudo docker kill -s HUP angie
+   65  curl -I http://mysite.ru/images/pic01.jpg
+   66  sudo nano angie/http.d/default.conf 
+   67  curl -I http://mysite.ru/images/pic01.jpg
+   68  exit
+   69  sudo docker start angie
+   70  ps -afx
+   71  sudo docker ps
+   72  sudo docker start angie
+   73  sudo docker ps
+   74  sudo nano angie/http.d/default.conf
+   75  sudo cat angie/http.d/default.conf
+   76  sudo nano angie/http.d/default.conf
+   77  sudo docker start angie
+   78  sudo docker ps
+   79  ps -afx
+   80  sudo docker kill -s HUP angie
+   81  ps -afx
+   82  sudo nano angie/http.d/default.conf
+   83  ls git/tmpfiles/
+   84  cp angie/default.conf git/tmpfiles/
+   85  cp angie/http.d/default.conf git/tmpfiles/
+   86  cp angie/angie.conf git/tmpfiles/
+   87  cd git/tmpfiles/
+   88  git add .
+   89  git commit -m "Add files"
+   90  git push
+   91  exit
+   92  sudo nano angie/angie.conf 
+   93  curl -I http://mysite.ru
+   94  curl -I http://mysite.ru/assets/css/main.css
+   95  curl -I http://mysite.ru/images/pic01.jpg
+   96  curl -I -v http://mysite.ru/assets/css/main.css 2>&1 | head -30
+   97  sudo docker exec angie sudo angie -T | grep -B2 -A5 "return 301\|return 302\|https://"
+   98  docker exec angie angie -T
+   99  sudo docker exec angie angie -T
+  100  docker exec angie angie -t        # проверка конфига
+  101  docker exec angie angie -s reload
+  102  sudo docker exec angie angie -s reload
+  103  # Запрос без кэша
+  104  curl -I --no-keepalive -H "Cache-Control: no-cache" http://mysite.ru/assets/css/main.css
+  105  sudo 
+  106  sudo docker exec angie angie -s reload
+  107  curl -I --no-keepalive -H "Cache-Control: no-cache" http://mysite.ru/assets/css/main.css
+  108  curl -I --no-keepalive -H "Cache-Control: no-cache" http://localhost/assets/css/main.css
+  109  curl -I http://localhost/assets/css/main.css
+  110  curl -I http://localhost/images/pic01.jpg
+  111  curl -I http://localhost/index.html
+  112  curl -I http://localhost/error/index.html
+  113  curl -I http://localhost/error/index.htm
+  114  curl -I http://localhost/index.html
+  115  exit
+  116  ls angie/
+  117  ls angie/http.d/
+  118  cat angie/http.d/default.conf 
+  119  exit
+  120  ls
+  121  cd gir
+  122  cd git
+  123  ls
+  124  cd tmpfiles/
+  125  git pull
+  126  ls
+  127  cd proxy/
+  128  docker-compose up -d
+  129  sudo apt install docker-compose
+  130  sudo docker-compose up -d
+  131  sudo docker-compose ps
+  132  exit
+  133  history
+  134  sudo docker-compose ps -a
+  135  ls 
+  136  ls git
+  137  ls git/tmpfiles/
+  138  ls git/tmpfiles/proxy/
+  139  cd git/tmpfiles/proxy/
+  140  cat docker-compose.yml 
+  141  ls
+  142  cd ..
+  143  git status
+  144  git pull
+  145  ls
+  146  cd pro
+  147  cd proxy/
+  148  ls
+  149  cd ..
+  150  git push
+  151  cd ..
+  152  ls -la
+  153  cd tmpfiles/
+  154  ls -la
+  155  git push
+  156  git pull
+  157  git status
+  158  ls -la
+  159  cd proxy/
+  160  ls -la
+  161  nano docker-compose.yml 
+  162  nano ~/angie/angie.conf
+  163  sudo nano ~/angie/angie.conf
+  164  sudo nano ~/angie/http.d/default.conf 
+  165  sudo cp ~/angie/http.d/default.conf ~/angie/http.d/srvwordpress.conf 
+  166  sudo nano ~/angie/http.d/srvwordpress.conf 
+  167  nano docker-compose.yml 
+  168  sudo nano /etc/hosts
+  169  sudo cp /etc/hosts ./
+  170  ls
+  171  sudo docker ps -a
+  172  sudo docker ps
+  173  sudo docker exec --help
+  174  sudo docker exec 69cd7bcb2904 angie -t
+  175  sudo docker exec 69cd7bcb2904 sudo angie -t && sudo service angie start
+  176  sudo docker exec 69cd7bcb2904 sudo angie -t && sudo service angie reload
+  177  sudo docker logs 69cd7bcb2904
+  178  docker ps
+  179  sudo docker ps
+  180  sudo docker restart 69cd7bcb2904 
+  181  sudo docker ps
+  182  sudo docker logs 69cd7bcb2904
+  183  sudo cat ~/angie/angie.conf 
+  184  sudo cat ~/angie/http.d/srvwordpress.conf 
+  185  sudo nano ~/angie/http.d/srvwordpress.conf 
+  186  sudo docker restart 69cd7bcb2904 
+  187  sudo docker logs 69cd7bcb2904
+  188  sudo docker exec000 69cd7bcb2904 angie -t
+  189  sudo docker exec 69cd7bcb2904 angie -t
+  190  sudo nano ~/angie/http.d/srvwordpress.conf 
+  191  sudo cat ~/angie/http.d/srvwordpress.conf 
+  192  sudo docker ps
+  193  sudo docker exec 69cd7bcb2904 angie -s reload
+  194  sudo docker logs 69cd7bcb2904
+  195  docker ps docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro assaflavie/runlike 69cd7bcb2904
+  196  sudo docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro assaflavie/runlike 69cd7bcb2904
+  197  sudo docker inspect 69cd7bcb2904 --format='{{json .Mounts}}' | python3 -m json.tool
+  198  sudo docker stop 69cd7bcb2904
+  199  sudo docker ps
+  200  sudo nano docker-compose.yml 
+  201  sudo docker stop 774aa5a1b64d
+  202  sudo docker stop 2ebc8367b3cd
+  203  sudo docker-compose up -d
+  204  cat docker-compose.yml 
+  205  nano docker-compose.yml 
+  206  sudo docker-compose up -d
+  207  nano docker-compose.yml 
+  208  sudo docker-compose down
+  209  sudo docker-compose up -d
+  210  nano docker-compose.yml 
+  211  sudo docker-compose down
+  212  sudo docker-compose up -d
+  213  ls /home/vagrant/angie/
+  214  ls -la /home/vagrant/angie/
+  215  ls -la /home/vagrant/angie/angie.conf/
+  216  ls -la /home/vagrant/angie/http.d/
+  217  docker run --rm --name angie -v /var/www:/usr/share/angie/html:ro -p 8080:80 -d docker.angie.software/angie:1.11.4-ubuntu
+  218  sudo docker run --rm --name angie -v /var/www:/usr/share/angie/html:ro -p 8080:80 -d docker.angie.software/angie:1.11.4-ubuntu
+  219  sudo docker ps
+  220  sudo docker ps -a
+  221  sudo docker run --rm --name angie2 -v /var/www:/usr/share/angie/html:ro -p 8080:80 -d docker.angie.software/angie:1.11.4-ubuntu
+  222  sudo rm -f /home/vagrant/angie
+  223  sudo rm -rf /home/vagrant/angie
+  224  sudo docker cp
+  225  ls
+  226  cd ..
+  227  ls
+  228  cd 2_demo/
+  229  ls
+  230  cd ..
+  231  git push
+  232  git pull
+  233  ls
+  234  cd proxy/
+  235  cp default.conf ~/angie/http.d/
+  236  sudo cp default.conf ~/angie/http.d/
+  237  sudo docker-compose up -d
+  238  sudo docker ps
+  239  sudo docker stop df78438cc8fa
+  240  sudo docker ps
+  241  cat docker-compose.yml 
+  242  git status
+  243  git add .
+  244  git commit -m "Add files"
+  245  git push
+  246  curl -I -H "Host: myword.ru" http://127.0.0.1
+  247  sudo docker-compose down
+  248  docker volume rm $(docker volume ls -q | grep wordpress)docker volume rm $(docker volume ls -q | grep wordpress)
+  249  sudo docker volume rm $(docker volume ls -q | grep wordpress)docker volume rm $(docker volume ls -q | grep wordpress)
+  250  sudo docker volume ls
+  251  cat doc
+  252  cat docker-compose.yml 
+  253  nano docker-compose.yml 
+  254  nano default.conf 
+  255  sudo cp default.conf ~/angie/http.d/
+  256  sudo docker-compose up -d
+  257  curl -I -H "Host: myword.ru" http://127.0.0.1
+  258  sudo docker volume ls
+  259  sudo docker volume --help
+  260  sudo docker-compose --help
+  261  sudo docker-compose down
+  262  sudo docker volume ls
+  263  sudo docker volume rm
+  264  sudo docker volume rm --help
+  265  sudo docker volume rm -f
+  266  sudo docker volume ls
+  267  sudo docker ps -a
+  268  sudo docker volume ls c532cd476f11
+  269  sudo docker c532cd476f11 volume ls
+  270  sudo docker volume c532cd476f11  ls
+  271  sudo docker volume ls
+  272  sudo docker-compose up -d
+  273  sudo docker volume ls
+  274  sudo docker-compose down
+  275  sudo docker remove
+  276  sudo docker --help
+  277  sudo docker rm
+  278  sudo docker ps -a
+  279  sudo docker rm c532cd476f11
+  280  sudo docker volume -ls
+  281  sudo docker volume ls
+  282  sudo docker rm
+  283  sudo docker volume rm -f
+  284  sudo docker volume rm
+  285  sudo docker volume rm all
+  286  sudo docker volume rm $(sudo docker volume ls -q)
+  287  sudo docker volume ls
+  288  sudo docker-compose up -d
+  289  sudo docker ps
+  290  curl -I -H "Host: myword.ru" http://127.0.0.1
+  291  curl -I -H "Host: myword.ru" http://myword.ru
+  292  cat docker-compose.yml 
+  293  docker-compose logs wordpress
+  294  sudo docker-compose logs wordpress
+  295  curl -I -H "Host: myword.ru" http://127.0.0.1
+  296  cat defa
+  297  cat default.conf 
+  298  nano default.conf 
+  299  sudo cp default.conf ~/angie/http.d/
+  300  sudo docker exec webserver ls -la /var/www/html
+  301  sudo docker-compose exec webserver angie -s reload
+  302  curl -I -H "Host: myword.ru" http://127.0.0.1
+  303  nano default.conf 
+  304  sudo cp default.conf ~/angie/http.d/
+  305  sudo docker-compose exec webserver angie -s reload
+  306  curl -I -H "Host: myword.ru" http://127.0.0.1
+  307  sudo docker inspect wordpress --format='{{json .Mounts}}' | python3 -m json.tool
+  308  sudo docker inspect webserver --format='{{json .Mounts}}' | python3 -m json.tool
+  309  sudo docker-compose exec webserver angie -s reload
+  310  sudo docker-compose ps
+  311  curl -I -H "Host: myword.ru" http://127.0.0.1
+  312  ls -la ~/angie/http.d/default.conf 
+  313  cat ~/angie/http.d/default.conf 
+  314  sudo docker exec webserver cat /etc/angie/angie.conf
+  315  curl -I -H "Host: myword.ru" http://127.0.0.1/index.php
+  316  sudo docker exec webserver ls -la /var/www/html/
+  317  sudo docker-compose logs webserver | tail -50
+  318  nano default.conf 
+  319  sudo cp default.conf ~/angie/http.d/
+  320  sudo docker-compose exec webserver angie -s reload
+  321  curl -I -H "Host: myword.ru" http://127.0.0.1
+  322  sudo docker exec webserver ls -la /etc/angie/http.d/
+  323  ls -la /home/vagrant/angie/http.d/
+  324  cd /home/vagrant/angie/http.d/
+  325  ls
+  326  cat defa
+  327  cat default.conf 
+  328  rm *
+  329  sudo rm *
+  330  cp ~/git/tmpfiles/proxy/default.conf ./
+  331  sudo cp ~/git/tmpfiles/proxy/default.conf ./
+  332  ls
+  333  sudo docker-compose exec webserver angie -s reload
+  334  curl -I -H "Host: myword.ru" http://127.0.0.1
+  335  cd /home
+  336  ls
+  337  exit
+  338  cd git/tmpfiles/
+  339  nano default.conf
+  340  cd proxy/
+  341  nano default.conf 
+  342  sudo cp default.conf ~/angie/http.d/
+  343  sudo docker-compose exec webserver angie -s reload
+  344  curl -I -H "Host: myword.ru" http://127.0.0.1
+  345  curl -I -H "Host: myword.ru" http://127.0.0.1/wp-includes/images/w-logo-blue-white-bg.png
+  346  history > his_proxy.txt
